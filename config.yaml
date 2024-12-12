@@ -1,0 +1,6 @@
+data_folder: "data/"
+model_folder: "models/"
+catboost:
+  iterations: 500
+  learning_rate: 0.1
+  depth: 4
