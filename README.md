@@ -6,4 +6,4 @@ This project predicts total goals in a match using CatBoost regression.
 - `data/`: Contains input CSV files.
 - `models/`: Pre-trained model storage.
 - `src/`: Python scripts for preprocessing, training, and feature engineering.
-- `tests/`: Testing and predictions.
+- `predict/`: Single math predictions.
