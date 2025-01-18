@@ -40,7 +40,7 @@ def main():
     print("Data Shape:", df.shape)
 
     # Training
-    model, mae = train_model(df, config) #where should i save this mae like saving model, since i want to use it in the next step
+    model, mae = train_model(df, config)
     print(f"Training complete. Mean Absolute Error: {mae:.4f}")
 
     # Save model

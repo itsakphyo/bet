@@ -11,7 +11,7 @@ def predict(input_odds, model_path="models/catboost_model.pkl"):
     Predict total goals based on input odds using the pre-trained model.
 
     Args:
-        input_odds (dict): Dictionary with keys 'PSH', 'PSD', 'PSA'.
+        input_odds (dict): Dictionary with keys 'Home win odd', 'Draw odd', 'Away win odd'.
         model_path (str): Path to the saved model file.
 
     Returns:
@@ -48,9 +48,9 @@ def visualize_distribution(input_odds, predicted_value, mae):
 
     text_str = (
         f"Input Odds:\n"
-        f"Home Win (PSH): {input_odds['PSH']}\n"
-        f"Draw (PSD): {input_odds['PSD']}\n"
-        f"Away Win (PSA): {input_odds['PSA']}\n\n"
+        f"Home Win odd: {input_odds['PSH']}\n"
+        f"Draw odd: {input_odds['PSD']}\n"
+        f"Away Win odd: {input_odds['PSA']}\n\n"
         f"Predicted Total Goals: {predicted_value:.3f}\n"
         f"Mean Absolute Error (MAE): {mae:.4f}"
     )
@@ -69,9 +69,9 @@ def visualize_distribution(input_odds, predicted_value, mae):
 
 if __name__ == "__main__":
     input_odds = {
-        "PSH": float(input("Enter Home win odds (PSH): ")),
-        "PSD": float(input("Enter Draw odds (PSD): ")),
-        "PSA": float(input("Enter Away win odds (PSA): "))
+        "PSH": float(input("Enter Home win odds: ")),
+        "PSD": float(input("Enter Draw odds: ")),
+        "PSA": float(input("Enter Away win odds: "))
     }
 
     predicted_goals, mae = predict(input_odds)
